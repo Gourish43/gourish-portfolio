@@ -34,7 +34,11 @@ body {
 }
 
 /* ── SHARED UTILITIES ── */
-.container { max-width: var(--max-w); margin: 0 auto; }
+/* .container { max-width: var(--max-w); margin: 0 auto; } */
+.container {
+  width: min(1400px, 92%);
+  margin: 0 auto;
+}
 .serif { font-family: var(--serif); }
 
 .tag {
