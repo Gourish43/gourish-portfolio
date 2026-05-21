@@ -4,7 +4,7 @@ import ProjectCard from '../components/ProjectCard';
 import { getAllProjects, seedIfNeeded } from '../store/projectStore';
 import './Portfolio.css';
 
-const FILTERS = ['All','UX Design','SaaS','Research','Front-end'];
+const FILTERS = ['All','Entertainment','SaaS','Artificial Intelligence','Branding'];
 
 export default function Portfolio() {
   const [active, setActive]     = useState('All');
@@ -33,10 +33,10 @@ export default function Portfolio() {
 
   const filtered = projects.filter(p => {
     if (active === 'All')       return true;
-    if (active === 'UX Design') return (p.tags||[]).some(t => /ux|ui|design|figma/i.test(t));
-    if (active === 'SaaS')      return (p.tags||[]).some(t => /saas|enterprise|esg|ai/i.test(t));
-    if (active === 'Research')  return (p.tags||[]).some(t => /research/i.test(t));
-    if (active === 'Front-end') return (p.tags||[]).some(t => /react|front.end|html/i.test(t));
+    if (active === 'Entertainment') return (p.tags||[]).some(t => /Entertainment|Film|design|figma/i.test(t));
+    if (active === 'SaaS')      return (p.tags||[]).some(t => /saas|enterprise|esg/i.test(t));
+    if (active === 'Artificial Intelligence')  return (p.tags||[]).some(t => /Agentic|ai/i.test(t));
+    if (active === 'Branding') return (p.tags||[]).some(t => /logo|Poster|Flyer/i.test(t));
     return true;
   });
 
