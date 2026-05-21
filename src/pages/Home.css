@@ -140,7 +140,7 @@
   /* Left content — full width, comfortable padding */
   .hero-left {
     padding: 36px 6% 56px;
-    align-items: flex-start;
+    align-items: absolute;
   }
 
   /* Hide watermark on mobile — just takes up space */

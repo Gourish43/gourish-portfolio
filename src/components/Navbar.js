@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <Link to="/" className="nav-logo">GP.</Link>
+      <Link to="/" className="nav-logo">Gourish Pawaskar</Link>
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <li><Link to="/" className={isActive('/') && location.pathname === '/' ? 'active' : ''}>Home</Link></li>

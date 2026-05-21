@@ -40,7 +40,7 @@ export default function Home() {
           <div className="hero-watermark" aria-hidden="true">UX</div>
           <div className="hero-inner">
             <div className="hero-eyebrow"><span className="status-dot" /> Available for opportunities</div>
-            <h1 className="hero-name">Gourish<br /><em>Pawaskar</em></h1>
+            <h1 className="hero-name">I make complex things <br /><em>Pawaskar</em></h1>
             <p className="hero-title">UI/UX Designer · SaaS &amp; AI Platforms</p>
             <p className="hero-desc">Product-focused designer crafting accessible, human-centred experiences for enterprise SaaS, AI-driven platforms, and government systems. Based in Bengaluru, Karnataka.</p>
             <div className="hero-actions">
