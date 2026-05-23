@@ -91,7 +91,7 @@ export default function Home() {
           <p className="section-sub reveal d1">A snapshot of recent work — from AI enterprise platforms to regional news apps.</p>
           {loading ? (
             <div className="projects-loading">
-              {[1,2,3].map(i => <div key={i} className="proj-card-skeleton" />)}
+              {[1,2].map(i => <div key={i} className="proj-card-skeleton" />)}
             </div>
           ) : (
             <div className="home-proj-grid">
