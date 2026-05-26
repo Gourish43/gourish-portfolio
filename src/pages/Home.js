@@ -18,8 +18,8 @@ function useReveal() {
 }
 
 export default function Home() {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading]   = useState(true);
+const [projects, setProjects] = useState([]);
+const [loading, setLoading]   = useState(true);
   useReveal();
 
   useEffect(() => {
