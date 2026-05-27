@@ -1,0 +1,567 @@
+[
+  {
+    "id": "sustainext-agentic-ai",
+    "slug": "sustainext-agentic-ai",
+    "title": "Sustainext Agentic AI",
+    "desc": "Designed an AI-powered conversational experience for the Sustainext ESG platform — helping users identify workflow gaps, update ESG data, and generate report-ready outputs through intelligent task-based guidance.",
+    "year": "Jul 2025 – Aug 2025",
+    "tags": ["Agentic AI", "ESG Platform", "Enterprise UX", "SaaS Platform"],
+    "visual": "pv-2",
+    "thumbnail": "/thumbnails/sustainext-agentic-ai.png",
+    "accentBg": "linear-gradient(150deg, #DCFCE7 0%, #F0FDF4 70%)",
+    "heroStats": [
+      { "val": "2 Months", "label": "Timeline" },
+      { "val": "Web Platform", "label": "Platform" },
+      { "val": "AI + ESG", "label": "Focus" }
+    ],
+    "sections": [
+      {
+        "id": "sai-overview",
+        "type": "overview",
+        "title": "Project Overview",
+        "content": "Sustainext Agentic AI is an AI-powered experience designed to simplify ESG data management and reporting workflows within the Sustainext platform.\n\nThe project focused on helping users quickly identify missing information, resolve workflow gaps, and generate report-ready outputs through intelligent conversational interactions and task-based AI assistance.\n\nThe platform combines predefined prompts, contextual recommendations, and categorised AI modules to guide users efficiently through ESG-related tasks while reducing manual effort.",
+        "showImages": true,
+        "images": [
+          { "id": "sai-img-welcome", "url": "/images/sustainext/sustainext-welcome.jpg", "caption": "Sustainext Agent — welcome screen with AI query input", "position": "full" }
+        ],
+        "showMetrics": true,
+        "metrics": [
+          { "num": "2 Months", "label": "Timeline" },
+          { "num": "Web", "label": "Platform" },
+          { "num": "ESG", "label": "Industry" },
+          { "num": "AI UX", "label": "Scope" }
+        ]
+      },
+      {
+        "id": "sai-problem",
+        "type": "problem",
+        "title": "Problem Statement",
+        "content": "Managing ESG data across large enterprise platforms can become time-consuming and complex due to fragmented workflows, incomplete information, and difficulty navigating multiple modules.\n\nUsers needed a more guided and efficient way to identify missing data, understand workflow gaps, and complete reporting tasks without relying heavily on manual processes or platform expertise.",
+        "showBullets": true,
+        "bulletPoints": [
+          "Complex ESG workflow management with fragmented data spread across modules",
+          "Difficulty identifying missing information and understanding workflow gaps",
+          "High dependency on manual navigation and reporting processes",
+          "Lack of guided task completion for non-technical enterprise users"
+        ]
+      },
+      {
+        "id": "sai-role",
+        "type": "role",
+        "title": "My Role",
+        "content": "I worked as the UI/UX Designer responsible for designing the overall AI-assisted user experience — from structuring conversational workflows and task-based modules to building the dashboard interface and ensuring the experience remained intuitive at enterprise scale.",
+        "showBullets": true,
+        "bulletPoints": [
+          "AI experience & conversational UX design",
+          "Dashboard and control tower interface design",
+          "Information architecture and task flow structuring",
+          "Prompt library experience design",
+          "High-fidelity UI design in Figma"
+        ]
+      },
+      {
+        "id": "sai-process",
+        "type": "process",
+        "title": "Design Process",
+        "content": "The process focused on simplifying ESG workflows through guided AI interactions and structured task-based experiences — designed to feel supportive and efficient rather than overly technical.",
+        "showImages": true,
+        "images": [
+          { "id": "sai-img-chat", "url": "/images/sustainext/sustainext-cha.jpg", "caption": "Supply Chain Gap Assessment — AI-guided task flow with contextual action prompts", "position": "full" }
+        ],
+        "showSteps": true,
+        "steps": [
+          { "num": "01", "name": "Workflow Understanding", "desc": "Reviewed ESG workflows, reporting requirements, and user pain points across the platform." },
+          { "num": "02", "name": "AI Task Structuring", "desc": "Categorised workflows into task-based AI modules for clearer navigation and targeted assistance." },
+          { "num": "03", "name": "Conversational Design", "desc": "Designed guided conversational flows with actionable insights and recommended next steps." },
+          { "num": "04", "name": "Dashboard Design", "desc": "Created control tower dashboards to monitor AI feature usage and workflow activity." },
+          { "num": "05", "name": "Refinement", "desc": "Improved information hierarchy, interaction clarity, and overall usability across the platform." }
+        ]
+      },
+      {
+        "id": "sai-decisions",
+        "type": "decisions",
+        "title": "Key Design Decisions",
+        "showHighlight": true,
+        "highlightText": "Designed an AI-assisted workflow experience that simplifies ESG reporting through intelligent guidance and actionable insights — structured around tasks, not just conversation.",
+        "showBullets": true,
+        "bulletPoints": [
+          "**Task-based model over generic chatbot** — AI organised around specific workflow tasks for more relevant, actionable guidance",
+          "**Integrated prompt library** — predefined prompts reduce user effort and improve task completion speed",
+          "**Contextual recommendations** — surfaced relevant next steps based on the user's current workflow state",
+          "**Centralised usage dashboard** — control tower view for monitoring AI activity across the platform"
+        ]
+      },
+      {
+        "id": "sai-outcome",
+        "type": "outcome",
+        "title": "Outcome",
+        "content": "The final solution created a more guided and efficient ESG workflow experience — helping users identify missing information, complete reporting tasks faster, and access actionable insights more easily.\n\nThe AI-assisted experience improved workflow accessibility for enterprise users and helped clients interact with ESG processes in a more structured and user-friendly way.",
+        "showImages": true,
+        "images": [
+          { "id": "sai-img-dashboard", "url": "/images/sustainext/sustainext-dashboard.jpg", "caption": "Control Tower View — live AI credit usage and module analytics dashboard", "position": "full" }
+        ],
+        "showMetrics": true,
+        "metrics": [
+          { "num": "Faster", "label": "Report preparation" },
+          { "num": "Reduced", "label": "Workflow complexity" },
+          { "num": "Improved", "label": "ESG data accessibility" }
+        ]
+      },
+      {
+        "id": "sai-learnings",
+        "type": "learnings",
+        "title": "Key Learnings",
+        "content": "This project deepened my understanding of designing AI-assisted enterprise experiences and balancing conversational interactions with structured workflow systems.\n\nKey insight: effective AI UX isn't about building smarter chatbots — it's about designing task-oriented experiences that give users confidence and reduce friction at every step."
+      }
+    ]
+  },
+  {
+    "id": "aivas",
+    "slug": "aivas",
+    "title": "AIVAS — AI Voice Assistance System",
+    "desc": "Designed an AI-powered defence intelligence platform that streamlines audio transcription, translation, and insight extraction through a unified and efficient user workflow.",
+    "year": "Jan 2025 – Mar 2025",
+    "tags": ["AI Platform", "Defence Tech", "Enterprise UX", "Dashboard Design"],
+    "visual": "pv-1",
+    "thumbnail": "/thumbnails/aivas.png",
+    "accentBg": "linear-gradient(150deg, #E0E7FF 0%, #F0F4FF 70%)",
+    "heroStats": [
+      { "val": "3 Months", "label": "Timeline" },
+      { "val": "Solo Designer", "label": "Role" },
+      { "val": "Desktop SaaS", "label": "Platform" },
+      { "val": "End-to-End", "label": "Scope" }
+    ],
+    "sections": [
+      {
+        "id": "aivas-overview",
+        "type": "overview",
+        "title": "Project Overview",
+        "content": "AIVAS (Artificial Intelligence Voice Assistance System) is a defence-focused SaaS platform designed to simplify the analysis of multilingual audio files through AI-powered transcription, translation, and insight extraction.\n\nThe platform was created to help users quickly identify critical information from uploaded audio recordings while reducing manual effort and improving operational efficiency. The system combines multiple complex workflows into a single streamlined experience, enabling users to access categorized outputs, translated transcripts, and extracted insights from one unified interface.\n\nThe primary design goal was to create a clean, efficient, and easy-to-navigate workflow for handling large volumes of audio data with minimal user interaction.",
+        "showImages": true,
+        "images": [
+          { "id": "aivas-img-1", "url": "/images/aivas/Single-audio-analysis-by-upload-method.jpg", "caption": "Single audio analysis — upload workflow with transcription and insight extraction", "position": "full" }
+        ],
+        "showBullets": true,
+        "bulletPoints": [
+          "AI-powered audio intelligence platform for defence workflows",
+          "Supports transcription and multilingual translation",
+          "Bulk audio upload functionality for large-scale processing",
+          "Categorized insights surfaced in a unified dashboard",
+          "Optimized for operational efficiency with minimal interaction",
+          "Designed specifically for defence-focused use cases"
+        ],
+        "showMetrics": true,
+        "metrics": [
+          { "num": "3 Months", "label": "Timeline" },
+          { "num": "Desktop SaaS", "label": "Platform" },
+          { "num": "Bulk Audio", "label": "Upload Support" },
+          { "num": "End-to-End", "label": "Role" }
+        ]
+      },
+      {
+        "id": "aivas-problem",
+        "type": "problem",
+        "title": "Problem Statement",
+        "content": "The existing workflow for analyzing audio intelligence data involved fragmented processes, multiple tools, and time-consuming manual interactions. Users had to switch between different systems for transcription, translation, and information extraction, making the overall experience inefficient and difficult to manage at scale.\n\nAnother major challenge was handling large volumes of audio files while ensuring users could quickly access the most relevant insights based on operational priorities.\n\nThe goal was to simplify this experience into a single structured workflow that reduced cognitive load and improved accessibility to critical information.",
+        "showBullets": true,
+        "bulletPoints": [
+          "Disconnected workflows spread across multiple tools and systems",
+          "Time-consuming manual processing with limited automation",
+          "Difficulty managing and prioritizing large audio datasets",
+          "Inefficient information retrieval during high-priority operations",
+          "High interaction complexity creating unnecessary cognitive load"
+        ]
+      },
+      {
+        "id": "aivas-role",
+        "type": "role",
+        "title": "My Role",
+        "content": "I worked as the sole UI/UX designer for the project and was responsible for designing the complete user experience from concept to final interface design.\n\nI collaborated closely with stakeholders to understand workflow requirements, define information hierarchy, and create a scalable dashboard experience focused on usability and operational clarity.",
+        "showBullets": true,
+        "bulletPoints": [
+          "End-to-end UI/UX design ownership",
+          "User flow planning and journey mapping",
+          "Dashboard architecture and layout design",
+          "Information hierarchy and content structuring",
+          "Interaction design and micro-UX decisions",
+          "Design system consistency across all screens",
+          "High-fidelity UI creation in Figma"
+        ]
+      },
+      {
+        "id": "aivas-process",
+        "type": "process",
+        "title": "Design Process",
+        "content": "The design process focused on simplifying complex AI-powered workflows into a more structured and intuitive user experience. Since the platform handled multiple outputs simultaneously, the primary focus was on organizing information clearly while reducing unnecessary user interactions.",
+        "showSteps": true,
+        "steps": [
+          { "num": "01", "name": "Requirement Understanding", "desc": "Reviewed workflow expectations, operational requirements, and output priorities with stakeholders." },
+          { "num": "02", "name": "Information Structuring", "desc": "Organised transcription, translation, and extracted insights into a clear and scannable content hierarchy." },
+          { "num": "03", "name": "Workflow Simplification", "desc": "Reduced interaction complexity by consolidating multiple actions into a single unified experience." },
+          { "num": "04", "name": "Dashboard UI Design", "desc": "Designed a structured interface optimised for readability, accessibility, and quick information scanning." },
+          { "num": "05", "name": "Final UI Refinement", "desc": "Refined layouts, spacing, and component consistency for a polished and coherent enterprise experience." }
+        ]
+      },
+      {
+        "id": "aivas-decisions",
+        "type": "decisions",
+        "title": "Key Design Decisions",
+        "showImages": true,
+        "images": [
+          { "id": "aivas-img-2", "url": "/images/aivas/Single-audio-analysis-by-upload-method2.webp", "caption": "Unified output view — transcription, translation and extracted insights on a single screen", "position": "full" }
+        ],
+        "content": "One of the key design decisions was to centralize all important outputs within a single interface instead of distributing them across multiple screens. This helped reduce navigation effort and allowed users to compare transcription, translation, and extracted insights more efficiently.\n\nAnother important decision was implementing categorized information sections to improve readability and help users prioritize critical outputs quickly. The bulk upload feature was also designed to minimize repetitive actions and improve workflow scalability.\n\nSpecial attention was given to maintaining a clean visual hierarchy despite the high density of information displayed on screen.",
+        "showHighlight": true,
+        "highlightText": "Designed to simplify complex audio intelligence workflows into a faster and more accessible user experience.",
+        "showBullets": true,
+        "bulletPoints": [
+          "**Unified single-screen workflow** — all outputs consolidated to eliminate cross-screen navigation",
+          "**Reduced interaction complexity** — fewer steps between upload and insight access",
+          "**Prioritized information hierarchy** — critical data surfaced at the top of each view",
+          "**Scalable bulk-upload experience** — supports large audio volumes without repetitive actions",
+          "**Improved content readability** — clear typographic and spatial hierarchy throughout",
+          "**Structured enterprise dashboard layout** — designed for operational density without cognitive overload"
+        ]
+      },
+      {
+        "id": "aivas-outcome",
+        "type": "outcome",
+        "title": "Outcome",
+        "content": "The final solution created a more streamlined and efficient workflow for handling multilingual audio intelligence data. By consolidating transcription, translation, and insight extraction into one unified experience, the platform reduced operational complexity and improved accessibility to key information.\n\nThe project was positively appreciated for delivering a cleaner and more user-friendly experience compared to previous workflows, especially in handling large-scale audio processing tasks more efficiently.",
+        "showBullets": true,
+        "bulletPoints": [
+          "Improved overall workflow efficiency for audio intelligence tasks",
+          "Faster access to extracted insights and translated transcripts",
+          "Reduced manual interaction and repetitive navigation",
+          "Better information organisation across high-density screens",
+          "Simplified large-scale audio processing from upload to output",
+          "Positive stakeholder feedback on usability and clarity"
+        ],
+        "showMetrics": true,
+        "metrics": [
+          { "num": "Faster", "label": "Insight access" },
+          { "num": "Reduced", "label": "Manual interaction" },
+          { "num": "Unified", "label": "Workflow experience" },
+          { "num": "Scalable", "label": "Bulk processing" }
+        ]
+      },
+      {
+        "id": "aivas-learnings",
+        "type": "learnings",
+        "title": "Key Learnings",
+        "content": "This project strengthened my understanding of designing enterprise workflows that involve complex data processing and high information density. It also helped me improve my approach to structuring AI-driven outputs in a way that feels organized, accessible, and easy to navigate.\n\nOne of the biggest learnings was balancing functionality with simplicity — especially when designing for operational use cases where speed and accuracy both matter."
+      }
+    ]
+  },
+  {
+    "id": "reach-my-movie",
+    "slug": "reach-my-movie",
+    "title": "Reach My Movie",
+    "desc": "Designed a B2B entertainment platform that enables film producers to directly connect with theater owners, manage movie releases, track performance insights, and customize theater show operations without relying on distributors.",
+    "year": "Apr 2025 – Jun 2025",
+    "tags": ["B2B Platform", "Entertainment Tech", "Dashboard Design", "SaaS Platform"],
+    "visual": "pv-3",
+    "thumbnail": "/thumbnails/reach-my-movie.png",
+    "accentBg": "linear-gradient(150deg, #FEF3C7 0%, #FFFBEB 70%)",
+    "heroStats": [
+      { "val": "3 Months", "label": "Timeline" },
+      { "val": "UI/UX Designer", "label": "Role" },
+      { "val": "Desktop Platform", "label": "Platform" },
+      { "val": "Branding to UI", "label": "Scope" }
+    ],
+    "sections": [
+      {
+        "id": "rmm-overview",
+        "type": "overview",
+        "title": "Project Overview",
+        "content": "Reach My Movie is a B2B platform designed to simplify collaboration between film producers and theater owners by eliminating the dependency on traditional distributors.\n\nThe platform enables producers to directly manage movie releases, monitor performance across different cities, customize show schedules, and communicate with theater owners through a centralized system.\n\nThe goal of the project was to create a streamlined digital experience that improves operational visibility, simplifies coordination, and gives producers more control over movie distribution and performance tracking.",
+        "showBullets": true,
+        "bulletPoints": [
+          "Direct producer-to-theater collaboration without intermediaries",
+          "Movie performance tracking across tier cities and regions",
+          "Customizable theater show scheduling and management",
+          "Centralized communication workflow between stakeholders",
+          "Revenue and income monitoring for producers",
+          "Distributor-free operational model"
+        ],
+        "showMetrics": true,
+        "metrics": [
+          { "num": "3 Months", "label": "Timeline" },
+          { "num": "Desktop", "label": "Platform" },
+          { "num": "Film & Entertainment", "label": "Industry" },
+          { "num": "End-to-End", "label": "Scope" }
+        ]
+      },
+      {
+        "id": "rmm-problem",
+        "type": "problem",
+        "title": "Problem Statement",
+        "content": "Traditional movie distribution workflows heavily rely on intermediaries, making communication between producers and theater owners slower and less transparent. Producers often face challenges in tracking movie performance across different regions, managing show schedules efficiently, and accessing operational insights in real time.\n\nThe absence of a centralized platform also created inefficiencies in coordination, reporting, and decision-making for both producers and theater owners.\n\nThe project aimed to simplify this ecosystem by creating a direct and structured collaboration platform.",
+        "showBullets": true,
+        "bulletPoints": [
+          "Heavy dependency on distributors slowing down collaboration",
+          "Limited transparency in movie performance across regions",
+          "Inefficient communication workflows between stakeholders",
+          "Difficulty managing theater show operations at scale",
+          "Lack of a centralized reporting and analytics system",
+          "Limited producer control over show customization"
+        ]
+      },
+      {
+        "id": "rmm-role",
+        "type": "role",
+        "title": "My Role",
+        "content": "I worked as the UI/UX Designer for the project and contributed from the initial concept stage to the final design delivery. My responsibilities included logo design, product interface design, dashboard structuring, workflow planning, and creating a consistent visual experience across the platform.\n\nI collaborated closely with stakeholders to understand operational requirements and transform complex workflows into a more structured and intuitive platform experience.",
+        "showBullets": true,
+        "bulletPoints": [
+          "End-to-end UI/UX design",
+          "Logo and visual identity design",
+          "Dashboard architecture and layout design",
+          "User flow planning and journey structuring",
+          "Information architecture across multiple user roles",
+          "High-fidelity UI creation in Figma",
+          "Design system and component consistency",
+          "Final design handoff and delivery"
+        ]
+      },
+      {
+        "id": "rmm-process",
+        "type": "process",
+        "title": "Design Process",
+        "content": "The design process focused on simplifying operational workflows between producers and theater owners while ensuring the platform remained easy to navigate and scalable for different business needs.\n\nThe platform required balancing multiple functionalities — communication, movie performance tracking, revenue visibility, and show customization — within a structured and accessible interface. Special attention was given to clear information hierarchy and reducing workflow friction for users managing large-scale movie operations.",
+        "showImages": true,
+        "images": [
+          { "id": "rmm-img-slots", "url": "/images/reach-my-movie/slot-selection.webp", "caption": "Theater slot selection — show scheduling and customization workflow for theater owners", "position": "full" }
+        ],
+        "showSteps": true,
+        "steps": [
+          { "num": "01", "name": "Requirement Gathering", "desc": "Understood business workflows, stakeholder expectations, and operational pain points for both producers and theater owners." },
+          { "num": "02", "name": "Workflow Structuring", "desc": "Planned user flows for producers and theater owners to ensure smoother end-to-end collaboration." },
+          { "num": "03", "name": "Dashboard Planning", "desc": "Organised reporting, movie tracking, and show customization features into a scalable and navigable interface." },
+          { "num": "04", "name": "Visual Design", "desc": "Created a clean and modern UI system aligned with the entertainment industry's visual language." },
+          { "num": "05", "name": "Final Design Delivery", "desc": "Refined layouts, components, and branding elements for a polished and consistent final handoff." }
+        ]
+      },
+      {
+        "id": "rmm-decisions",
+        "type": "decisions",
+        "title": "Key Design Decisions",
+        "content": "One of the major design decisions was creating a centralized dashboard that allows producers to monitor movie performance and theater operations from a single interface. This reduced dependency on fragmented communication and improved visibility across multiple locations.\n\nAnother important decision was designing flexible show customization workflows so theater owners could efficiently manage schedules while maintaining coordination with producers.\n\nThe interface was intentionally kept structured and data-focused to support quick decision-making and operational clarity.",
+        "showHighlight": true,
+        "highlightText": "Designed to simplify movie distribution workflows through direct collaboration and operational visibility.",
+        "showBullets": true,
+        "bulletPoints": [
+          "**Centralized operational dashboard** — single interface for monitoring performance across all locations",
+          "**Simplified producer–theater communication** — direct messaging reducing reliance on external channels",
+          "**Flexible show customization** — theater owners can manage schedules without back-and-forth coordination",
+          "**Performance visibility across cities** — real-time tracking of revenue and attendance by region",
+          "**Structured data hierarchy** — critical metrics surfaced at a glance for faster decisions",
+          "**Clean enterprise-focused UI system** — consistent and scalable across all platform sections"
+        ]
+      },
+      {
+        "id": "rmm-outcome",
+        "type": "outcome",
+        "title": "Outcome",
+        "content": "The final platform created a more streamlined and transparent workflow for movie distribution and theater collaboration. By enabling direct interaction between producers and theater owners, the solution reduced operational complexity and improved access to performance insights.\n\nThe project was also recognized for its uniqueness and innovation, leading to the platform being patented by the client.",
+        "showImages": true,
+        "images": [
+          { "id": "rmm-img-revenue", "url": "/images/reach-my-movie/revenue.webp", "caption": "Revenue dashboard — producer's performance and income tracking across regions", "position": "full" }
+        ],
+        "showBullets": true,
+        "bulletPoints": [
+          "Improved operational transparency across the distribution workflow",
+          "Simplified collaboration between producers and theater owners",
+          "Better visibility into movie performance and revenue metrics",
+          "Streamlined theater management and show scheduling",
+          "Reduced dependency on intermediaries",
+          "Platform recognized as innovative and patented by the client"
+        ],
+        "showMetrics": true,
+        "metrics": [
+          { "num": "Patented", "label": "By the client" },
+          { "num": "Simplified", "label": "Distribution workflow" },
+          { "num": "Direct", "label": "Producer–theater link" },
+          { "num": "Improved", "label": "Performance visibility" }
+        ]
+      },
+      {
+        "id": "rmm-branding",
+        "type": "custom",
+        "title": "Brand Identity",
+        "content": "Along with the product interface, I also designed the visual identity and logo for Reach My Movie. The branding direction focused on creating a modern and recognizable identity that reflects collaboration, entertainment, and digital transformation within the film industry.",
+        "showImages": true,
+        "images": [
+          { "id": "rmm-img-logo", "url": "/images/reach-my-movie/logo.jpg", "caption": "Reach My Movie — logo and visual identity design", "position": "full" }
+        ],
+        "showBullets": true,
+        "bulletPoints": [
+          "Logo design and visual identity direction",
+          "Brand consistency applied across all platform screens",
+          "Entertainment-focused visual language and colour system",
+          "Identity designed to scale across digital and marketing touchpoints"
+        ]
+      },
+      {
+        "id": "rmm-learnings",
+        "type": "learnings",
+        "title": "Key Learnings",
+        "content": "This project helped me better understand B2B operational workflows within the entertainment industry and strengthened my ability to design platforms that balance business functionality with usability.\n\nWorking on the product from scratch also improved my approach to structuring large-scale dashboards, defining visual systems, and designing for multiple user roles within a single platform."
+      }
+    ]
+  },
+  {
+    "id": "mik-knowledge-repository",
+    "slug": "mik-knowledge-repository",
+    "title": "MIK — Knowledge Repository",
+    "desc": "Designed an AI-powered knowledge repository platform that helps organizations quickly access relevant documents, generate summarized insights, and streamline policy and rule creation through intelligent search and conversational interactions.",
+    "year": "Feb 2025 – Apr 2025",
+    "tags": ["AI Chat", "Enterprise UX", "Knowledge Management", "Government Project"],
+    "visual": "pv-4",
+    "thumbnail": "/thumbnails/maritime-ai-chat.png",
+    "accentBg": "linear-gradient(150deg, #F3E8FF 0%, #FAF5FF 70%)",
+    "heroStats": [
+      { "val": "3 Months", "label": "Timeline" },
+      { "val": "UI/UX Designer", "label": "Role" },
+      { "val": "Desktop App", "label": "Platform" },
+      { "val": "Gov / Enterprise", "label": "Industry" }
+    ],
+    "sections": [
+      {
+        "id": "mik-overview",
+        "type": "overview",
+        "title": "Project Overview",
+        "content": "MIK (Knowledge Repository) is an AI-powered enterprise platform designed to simplify document discovery, policy research, and knowledge accessibility within large organizational systems.\n\nThe platform enables users to search through large volumes of documents using conversational AI interactions and receive summarized responses along with relevant document references based on their queries.\n\nThe primary goal was to reduce the time spent manually reviewing documents and improve the efficiency of policy creation and decision-making workflows.",
+        "showBullets": true,
+        "bulletPoints": [
+          "AI-powered document discovery through conversational search",
+          "Summarized AI-generated responses with source references",
+          "Centralized document repository with structured navigation",
+          "Role-based document access for organizational control",
+          "Admin dashboard for document uploads and management",
+          "Designed for government and enterprise-scale operations"
+        ],
+        "showMetrics": true,
+        "metrics": [
+          { "num": "3 Months", "label": "Timeline" },
+          { "num": "Desktop", "label": "Platform" },
+          { "num": "Gov / Enterprise", "label": "Industry" },
+          { "num": "AI Search & Admin", "label": "Scope" }
+        ]
+      },
+      {
+        "id": "mik-problem",
+        "type": "problem",
+        "title": "Problem Statement",
+        "content": "Organizations managing large volumes of documents often face challenges in quickly locating relevant information required for creating policies, guidelines, and operational rules.\n\nThe existing process involved manually reviewing multiple documents, which increased research time, slowed decision-making, and made information retrieval inefficient.\n\nThe project aimed to simplify knowledge accessibility by introducing an AI-powered conversational system capable of retrieving related documents and generating summarized insights based on user queries.",
+        "showBullets": true,
+        "bulletPoints": [
+          "Time-consuming manual document research across large repositories",
+          "Difficulty locating relevant information quickly under operational pressure",
+          "Repetitive review of multiple files to extract key information",
+          "Slow policy and guideline creation due to fragmented knowledge access",
+          "Inefficient knowledge accessibility across departments",
+          "Delayed decision-making caused by poor information discoverability"
+        ]
+      },
+      {
+        "id": "mik-role",
+        "type": "role",
+        "title": "My Role",
+        "content": "I worked as the UI/UX Designer for the project and was responsible for designing the end-to-end experience for both the AI-assisted search interface and the administrative document management workflows.\n\nMy responsibilities included designing conversational search interactions, dashboard experiences, document access workflows, and ensuring the platform remained structured, accessible, and easy to navigate for enterprise users.",
+        "showBullets": true,
+        "bulletPoints": [
+          "End-to-end UI/UX design",
+          "Conversational AI search experience design",
+          "Admin dashboard and document management UX",
+          "Document access workflow structuring",
+          "Information architecture and repository navigation",
+          "Admin panel and permissions UX",
+          "Interaction design and user flow planning",
+          "High-fidelity UI design in Figma"
+        ]
+      },
+      {
+        "id": "mik-process",
+        "type": "process",
+        "title": "Design Process",
+        "content": "The design process focused on simplifying how users discover and interact with organizational knowledge across large document repositories.\n\nA major focus was creating a conversational experience that feels intuitive while ensuring users can quickly access summarized insights and related documents without navigating through complex folder structures. Special attention was also given to designing scalable admin workflows for document management, access control, and repository maintenance.",
+        "showImages": true,
+        "images": [
+          { "id": "mik-img-doc", "url": "/images/maritime-ai-chat/update-document-page.jpg", "caption": "Document management — admin workflow for uploading, categorising and controlling document access", "position": "full" }
+        ],
+        "showSteps": true,
+        "steps": [
+          { "num": "01", "name": "Workflow Understanding", "desc": "Reviewed existing document management and policy research workflows to identify friction points." },
+          { "num": "02", "name": "Search Experience Planning", "desc": "Structured AI-driven conversational flows to enable faster and more natural knowledge retrieval." },
+          { "num": "03", "name": "Information Architecture", "desc": "Organised document categories, access structures, and repository navigation for scalability." },
+          { "num": "04", "name": "Admin Workflow Design", "desc": "Designed dashboards for document uploads, access permissions, and usage monitoring." },
+          { "num": "05", "name": "Final UI Refinement", "desc": "Refined layouts, interaction clarity, and enterprise usability across all platform screens." }
+        ]
+      },
+      {
+        "id": "mik-decisions",
+        "type": "decisions",
+        "title": "Key Design Decisions",
+        "content": "One of the key design decisions was presenting AI-generated summaries alongside related document references to help users quickly validate information without manually reviewing multiple files.\n\nAnother important decision was implementing role-based document access and categorized repository structures to improve usability and maintain better information control within the platform.\n\nThe conversational search experience was intentionally designed to feel structured and professional while supporting faster knowledge discovery.",
+        "showHighlight": true,
+        "highlightText": "Designed to transform complex document research into a faster and more accessible AI-assisted experience.",
+        "showBullets": true,
+        "bulletPoints": [
+          "**Conversational AI search** — natural query-based discovery replacing manual folder navigation",
+          "**AI-generated summaries with source references** — users validate quickly without opening every document",
+          "**Related document recommendations** — contextual suggestions to support deeper exploration",
+          "**Structured repository organization** — categorized for faster browsing across large archives",
+          "**Role-based access management** — controlled visibility tailored to organizational hierarchy",
+          "**Enterprise-focused admin dashboard** — clear controls for uploads, permissions, and usage monitoring"
+        ]
+      },
+      {
+        "id": "mik-outcome",
+        "type": "outcome",
+        "title": "Outcome",
+        "content": "The final solution improved how users access organizational knowledge by reducing manual research effort and making document discovery more efficient.\n\nThe AI-assisted experience helped users retrieve relevant information faster, access summarized insights quickly, and support decision-making workflows more effectively within a centralized platform.\n\nDue to the confidential nature of the government project, only selected workflows and interface experiences can be publicly showcased.",
+        "showBullets": true,
+        "bulletPoints": [
+          "Reduced time spent on manual document research",
+          "Faster decision-making through AI-generated summaries",
+          "Improved knowledge accessibility across the organization",
+          "Simplified document discovery and policy creation workflows",
+          "Better information organization within the repository",
+          "Enhanced enterprise usability for government-scale operations"
+        ],
+        "showMetrics": true,
+        "metrics": [
+          { "num": "Faster", "label": "Document discovery" },
+          { "num": "Reduced", "label": "Research effort" },
+          { "num": "Improved", "label": "Decision workflows" },
+          { "num": "Confidential", "label": "Government project" }
+        ]
+      },
+      {
+        "id": "mik-ai-search",
+        "type": "custom",
+        "title": "AI Search Experience",
+        "content": "The conversational AI experience was designed to simplify how users interact with large document repositories by allowing natural query-based searches instead of traditional manual navigation methods.\n\nThe system provides summarized insights along with related document references, helping users quickly understand relevant information and continue deeper exploration when required.",
+        "showImages": true,
+        "images": [
+          { "id": "mik-img-chat", "url": "/images/maritime-ai-chat/chat.jpg", "caption": "Conversational AI search — natural language query with summarised insights and document references", "position": "full" }
+        ],
+        "showBullets": true,
+        "bulletPoints": [
+          "Conversational document discovery through natural language queries",
+          "AI-generated summaries reducing time-to-insight",
+          "Contextual document recommendations based on query relevance",
+          "Faster information retrieval without navigating folder hierarchies",
+          "Simplified knowledge exploration for non-technical enterprise users"
+        ]
+      },
+      {
+        "id": "mik-learnings",
+        "type": "learnings",
+        "title": "Key Learnings",
+        "content": "This project strengthened my understanding of designing AI-assisted enterprise workflows that involve large-scale information management and structured knowledge accessibility.\n\nIt also helped me improve my approach to balancing conversational UX with enterprise-level usability, security, and information hierarchy requirements."
+      }
+    ]
+  }
+]

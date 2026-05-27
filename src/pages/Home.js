@@ -1,32 +1,104 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
 import { getAllProjects, seedIfNeeded } from '../store/projectStore';
 import './Home.css';
 import mePic from './me.png';
 
-
 function useReveal() {
   useEffect(() => {
     const els = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
     els.forEach(el => obs.observe(el));
     return () => obs.disconnect();
   });
 }
 
+/* ── Certificate data ── */
+const CERTS = [
+  {
+    abbr: 'UI',
+    color: '#1A1916',
+    title: 'UI/UX Design',
+    issuer: 'Information Technology Learning Hub',
+    image: '/certs/uiux-design.png',
+  },
+  {
+    abbr: 'WD',
+    color: '#2D3748',
+    title: 'Dynamic Web Design',
+    issuer: 'IxDF — Interaction Design Foundation',
+    image: '/certs/Dynamic User experience.png',
+  },
+  {
+    abbr: 'ED',
+    color: '#2D3748',
+    title: 'Emotional Design',
+    issuer: 'IxDF — Interaction Design Foundation',
+    image: '/certs/emotion-design.png',
+  },
+  {
+    abbr: 'PM',
+    color: '#1A1916',
+    title: 'Project Management Foundation',
+    issuer: 'LinkedIn Learning',
+    image: '/certs/project-management.jpg',
+  },
+];
+
+/* ── Cert Lightbox Modal ── */
+function CertModal({ cert, onClose }) {
+  const handleKey = useCallback((e) => { if (e.key === 'Escape') onClose(); }, [onClose]);
+  useEffect(() => {
+    document.addEventListener('keydown', handleKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKey);
+      document.body.style.overflow = '';
+    };
+  }, [handleKey]);
+
+  return (
+    <div className="cert-modal-overlay" onClick={onClose}>
+      <div className="cert-modal" onClick={e => e.stopPropagation()}>
+        <button className="cert-modal-close" onClick={onClose} aria-label="Close">✕</button>
+        <div className="cert-modal-header">
+          <div className="cert-modal-abbr" style={{ background: cert.color }}>{cert.abbr}</div>
+          <div>
+            <div className="cert-modal-title">{cert.title}</div>
+            <div className="cert-modal-issuer">{cert.issuer}</div>
+          </div>
+        </div>
+        <div className="cert-modal-img-wrap">
+          <img
+            src={cert.image}
+            alt={`${cert.title} certificate`}
+            className="cert-modal-img"
+            onError={e => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
+          />
+          <div className="cert-modal-placeholder">
+            <div className="cert-placeholder-abbr" style={{ background: cert.color }}>{cert.abbr}</div>
+            <p>Certificate image not yet uploaded.<br />Add it to <code>/public/certs/</code></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
-const [projects, setProjects] = useState([]);
-const [loading, setLoading]   = useState(true);
+  const [projects, setProjects] = useState([]);
+  const [activeCert, setActiveCert] = useState(null);
+  const [loading, setLoading] = useState(true);
   useReveal();
 
   useEffect(() => {
     async function load() {
       await seedIfNeeded();
       const all = await getAllProjects();
-      setProjects(all.slice(0, 4));
+      setProjects(all.slice(0, 3));
       setLoading(false);
     }
     load();
@@ -34,33 +106,210 @@ const [loading, setLoading]   = useState(true);
 
   return (
     <main>
-      {/* ── HERO ── */}
+
+      {/* ══════════════════════════════════════════
+          HERO — editorial 3-column layout
+      ══════════════════════════════════════════ */}
       <section className="hero">
-        <div className="hero-left">
-          <div className="hero-watermark" aria-hidden="true">UX</div>
-          <div className="hero-inner">
-            <div className="hero-eyebrow"><span className="status-dot" /> Available for opportunities</div>
-            <h1 className="hero-name">I make complex things <br /><em>feel simple</em></h1>
-            <p className="hero-title">UI/UX Designer · SaaS &amp; AI Platforms</p>
-            <p className="hero-desc">Product-focused designer crafting accessible, human-centred experiences for enterprise SaaS, AI-driven platforms, and government systems. Based in Bengaluru, Karnataka.</p>
-            <div className="hero-actions">
-              <Link to="/portfolio" className="btn-primary">View Portfolio</Link>
-              <Link to="/contact" className="btn-outline">Let's Talk</Link>
-            </div>
-            <div className="hero-stats">
-              {[['4+','Years experience'],['20+','Products shipped'],['5','Certifications']].map(([n,l]) => (
-                <div key={l}><div className="stat-num">{n}</div><div className="stat-label">{l}</div></div>
-              ))}
-            </div>
+        {/* Left: text content */}
+        <div className="hero-center">
+          <div className="hero-eyebrow">
+            <span className="status-dot" />
+            Available for opportunities
+          </div>
+          <h1 className="hero-display">
+            I make complex<br />things <em>feel simple</em>
+          </h1>
+          <p className="hero-byline">— Gourish Pawaskar, UI/UX Designer</p>
+          <p className="hero-subtitle">SaaS · AI Platforms · Enterprise</p>
+          <div className="hero-actions">
+            <Link to="/portfolio" className="btn-primary">View Portfolio →</Link>
+            <Link to="/contact" className="btn-outline">Let's Talk</Link>
+          </div>
+
+          {/* Stats strip below CTAs */}
+          <div className="hero-stats-strip">
+            {[['4+','Years experience'],['20+','Products shipped'],['5','Certifications']].map(([n,l]) => (
+              <div key={l} className="hero-stat-item">
+                <div className="hero-stat-num">{n}</div>
+                <div className="hero-stat-label">{l}</div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="hero-photo-panel" aria-hidden="true">
+
+        {/* Right: full-height photo */}
+        <div className="hero-photo-panel">
           <img src={mePic} alt="Gourish Pawaskar" className="hero-photo" />
           <div className="hero-photo-fade" />
         </div>
       </section>
 
-      {/* ── SKILLS ── */}
+      {/* ══════════════════════════════════════════
+          ABOUT ME — 2-column with metric
+      ══════════════════════════════════════════ */}
+      <section className="section about-section">
+        <div className="container">
+          <div className="about-grid">
+            {/* Left: text + metric */}
+            <div className="about-left">
+              <div className="section-label">About Me</div>
+              <p className="about-lead">
+                I specialise in solving complex problems through elegant solutions. My approach blends creativity with
+                strategic thinking to deliver designs that not only look great but work seamlessly.
+              </p>
+              <div className="about-metric-card">
+                <div className="about-metric-num">40%</div>
+                <p className="about-metric-desc">
+                  Average increase in client engagement in the first 6 months — backed by measurable outcomes across every project.
+                </p>
+              </div>
+                          </div>
+
+            {/* Right: bullet points */}
+            <div className="about-right">
+              <div className="about-bullets reveal d1">
+                {[
+                  'With 4+ years of experience, specialising in crafting intuitive, user-focused designs that deliver seamless digital experiences.',
+                  'I enjoy working directly with clients, blending creativity and logic to bring their vision to life through thoughtful, impactful design solutions.',
+                ].map((point, i) => (
+                  <div key={i} className="about-bullet">
+                    <span className="about-bullet-icon">✓</span>
+                    <p>{point}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          LATEST WORKS — 3-column project cards
+      ══════════════════════════════════════════ */}
+      <section className="section works-section">
+        <div className="container">
+          <div className="works-header reveal">
+            <div>
+              <div className="section-label">Portfolio</div>
+              <h2 className="section-title">Latest Works</h2>
+            </div>
+          </div>
+
+          {loading ? (
+            <div className="works-grid">
+              {[1,2,3].map(i => <div key={i} className="proj-card-skeleton" />)}
+            </div>
+          ) : (
+            <div className="works-grid">
+              {projects.map((p, i) => (
+                <div key={p.id} className={`reveal d${i}`}>
+                  <ProjectCard {...p} featured={false} />
+                </div>
+              ))}
+            </div>
+          )}
+
+          <div className="works-footer reveal">
+            <Link to="/portfolio" className="btn-outline">Check out More →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          EXPERIENCE — clean list style
+      ══════════════════════════════════════════ */}
+      <section className="section exp-section">
+        <div className="container">
+          <div className="exp-header reveal">
+            <div>
+              <div className="section-label">Experiences</div>
+              <h2 className="section-title">Explore My Design Journey</h2>
+            </div>
+            <div className="exp-header-right">
+              <p className="exp-intro">
+                Over the past 4+ years, I've had the opportunity to work on a wide range of design projects, collaborating with diverse teams and clients to bring creative visions to life.
+              </p>
+              <Link to="/contact" className="btn-outline">Let's Talk</Link>
+            </div>
+          </div>
+
+          <div className="exp-list">
+            {[
+              {
+                company: 'Sustainext Digital Pvt Ltd',
+                loc: 'Bengaluru, KA',
+                date: 'Nov 2025 — Present',
+                role: 'UI/UX Designer',
+                desc: 'Designing scalable UI/UX for an enterprise SaaS platform focused on ESG management and Agentic AI-driven workflows.',
+                tags: ['SaaS', 'Agentic AI'],
+                current: true,
+              },
+              {
+                company: 'Bharat Electronics Limited',
+                loc: 'Bengaluru, KA',
+                date: 'Jan – Nov 2025',
+                role: 'UI/UX Designer',
+                desc: 'Led end-to-end UI/UX for confidential government & defence platforms. Streamlined handoffs, cutting turnaround 20%.',
+                tags: ['UX', 'WCAG 2.1'],
+              },
+              {
+                company: 'Nudijenu Publishers',
+                loc: 'Karwar, KA',
+                date: 'Sep 2023 – Dec 2024',
+                role: 'UI/UX Designer',
+                desc: 'Redesigned and launched responsive websites, improving digital reach by 30%. Conducted user research, wireframing, and prototyping.',
+                tags: ['Branding', 'UX'],
+              },
+              {
+                company: 'Nudijenu Publishers',
+                loc: 'Karwar, KA',
+                date: 'Aug 2020 – Mar 2023',
+                role: 'Layout Artist',
+                desc: 'Modernised print layouts and visual hierarchy resulting in a 42% increase in NPS. Standardised reusable templates.',
+                tags: ['Print', 'Branding'],
+              },
+            ].map((job, i) => (
+              <div key={i} className={`exp-row reveal d${i % 3}`}>
+                <div className="exp-row-meta">
+                  <div className="exp-company">{job.company}{job.current && <span className="exp-badge">Current</span>}</div>
+                  <div className="exp-loc-date">{job.loc} · {job.date}</div>
+                </div>
+                <div className="exp-row-body">
+                  <div className="exp-role">{job.role}</div>
+                  <p className="exp-desc">{job.desc}</p>
+                </div>
+                <div className="exp-row-right">
+                  <div className="exp-tags">
+                    {job.tags.map(t => <span key={t} className="tag">{t}</span>)}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          DARK CTA BANNER
+      ══════════════════════════════════════════ */}
+      <section className="dark-cta-strip">
+        <div className="dark-cta-inner container">
+          <div className="dark-cta-text">
+            <div className="dark-cta-eyebrow">Book Your Free Consultation Here!</div>
+            <h2 className="dark-cta-title">Looking for a UI/UX designer?<br />Let's build something great.</h2>
+            <p className="dark-cta-sub">Open to full-time roles, contract projects, and design collaborations. Based in Bengaluru — available remotely too.</p>
+          </div>
+          <div className="dark-cta-actions">
+            <Link to="/contact" className="btn-primary">Let's Talk</Link>
+            <Link to="/portfolio" className="btn-outline">See My Work</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          SKILLS — 4-cell grid
+      ══════════════════════════════════════════ */}
       <section className="section skills-section">
         <div className="container">
           <div className="section-label">What I bring</div>
@@ -68,10 +317,10 @@ const [loading, setLoading]   = useState(true);
           <p className="section-sub reveal d1">A full-stack design toolkit spanning research, prototyping, design systems, and front-end implementation.</p>
           <div className="skills-grid reveal d2">
             {[
-              { icon:'✦', title:'Core Tools', tags:['Figma','Adobe XD','Photoshop','InDesign','Framer','Notion'] },
-              { icon:'◈', title:'Design Skills', tags:['Wireframing','Prototyping','User Research','Design Systems','Info Architecture','WCAG 2.1'] },
-              { icon:'⬡', title:'Domain Expertise', tags:['SaaS Design','AI Product Design','ESG Platforms','Enterprise Apps','Agentic AI'] },
-              { icon:'◻', title:'Development', tags:['HTML/CSS','ReactJS','Lovable AI','Builder.io','Bolt.new'] },
+              { icon: '✦', title: 'Core Tools', tags: ['Figma', 'Adobe XD', 'Photoshop', 'InDesign', 'Framer', 'Notion'] },
+              { icon: '◈', title: 'Design Skills', tags: ['Wireframing', 'Prototyping', 'User Research', 'Design Systems', 'Info Architecture', 'WCAG 2.1'] },
+              { icon: '⬡', title: 'Domain Expertise', tags: ['SaaS Design', 'AI Product Design', 'ESG Platforms', 'Enterprise Apps', 'Agentic AI'] },
+              { icon: '◻', title: 'Development', tags: ['HTML/CSS', 'ReactJS', 'Lovable AI', 'Builder.io', 'Bolt.new'] },
             ].map(cell => (
               <div key={cell.title} className="skill-cell">
                 <div className="skill-icon">{cell.icon}</div>
@@ -83,89 +332,41 @@ const [loading, setLoading]   = useState(true);
         </div>
       </section>
 
-      {/* ── HOME PROJECTS ── */}
-      <section className="section">
-        <div className="container">
-          <div className="section-label">Selected work</div>
-          <h2 className="section-title reveal">Projects</h2>
-          <p className="section-sub reveal d1">A snapshot of recent work — from AI enterprise platforms to regional news apps.</p>
-          {loading ? (
-            <div className="projects-loading">
-              {[1,2].map(i => <div key={i} className="proj-card-skeleton" />)}
-            </div>
-          ) : (
-            <div className="home-proj-grid">
-              {projects.map((p, i) => (
-                <div key={p.id} className={`reveal ${i > 0 ? `d${i}` : ''}`}>
-                  <ProjectCard {...p} featured={i === 0} />
-                </div>
-              ))}
-            </div>
-          )}
-          <div className="home-proj-cta reveal">
-            <Link to="/portfolio" className="btn-outline">See all projects →</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── EXPERIENCE ── */}
-      <section className="section exp-section">
-        <div className="container">
-          <div className="section-label">Career history</div>
-          <h2 className="section-title reveal">Work Experience</h2>
-          <p className="section-sub reveal d1">From print layout to AI product design — a steady evolution across publishing, enterprise SaaS, and defence.</p>
-          <div className="timeline">
-            {[
-              { current:true, date:'Nov 2025 — Present', loc:'Bengaluru, KA', role:'UI/UX Designer', company:'Sustainext Digital Pvt Ltd', badge:'Current',
-                points:['Designing scalable UI/UX for an enterprise SaaS platform focused on ESG management and Agentic AI-driven workflows.','Delivered Agentic AI and Supply Assessment modules from concept to production.','Simplified enterprise user journeys, reducing user complexity and improving efficiency.','Built and maintained scalable design systems to accelerate design-to-dev cycles.'] },
-              { date:'Jan – Nov 2025', loc:'Bengaluru, KA', role:'UI/UX Designer', company:'Bharat Electronics Limited', badge:'Contract · Quantum Asia',
-                points:['Led end-to-end UI/UX design for confidential government and defence platforms.','Streamlined design-to-dev handoffs, cutting turnaround time by 20%.','Delivered accessible, WCAG-compliant interfaces optimised for usability and security.'] },
-              { date:'Sep 2023 – Dec 2024', loc:'Karwar, KA', role:'UI/UX Designer', company:'Nudijenu Publishers',
-                points:['Redesigned and launched responsive websites, improving digital reach by 30%.','Conducted user research, wireframing, and prototyping for multiple web projects.','Strengthened brand identity through accessible, scalable design systems.'] },
-              { date:'Aug 2020 – Mar 2023', loc:'Karwar, KA', role:'Layout Artist', company:'Nudijenu Publishers',
-                points:['Modernised print layouts and visual hierarchy — resulting in a 42% increase in NPS.','Standardised reusable templates, improving design efficiency by 25%.','Designed print ads and visuals that enhanced audience engagement.'] },
-            ].map((job, i) => (
-              <div key={i} className={`tl-item reveal d${i}`}>
-                <div className="tl-dot" />
-                <div className="tl-date">
-                  <strong>{job.current ? 'Current' : job.date.split('—')[0].trim()}</strong>
-                  {job.date}<br />{job.loc}
-                </div>
-                <div className="tl-body">
-                  <div className="tl-role">{job.role}</div>
-                  <div className="tl-company">{job.company}{job.badge && <span className="tl-badge">{job.badge}</span>}</div>
-                  <ul className="tl-points">{job.points.map((p,j) => <li key={j}>{p}</li>)}</ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CERTIFICATIONS ── */}
+      {/* ══════════════════════════════════════════
+          CERTIFICATIONS
+      ══════════════════════════════════════════ */}
       <section className="section certs-section">
         <div className="container">
           <div className="section-label">Credentials</div>
           <h2 className="section-title reveal">Certifications</h2>
-          <p className="section-sub reveal d1">Continuous learning across design theory, web dynamics, and project management.</p>
+          <p className="section-sub reveal d1">Continuous learning across design theory, web dynamics, and project management. Click any card to view the certificate.</p>
           <div className="certs-grid">
-            {[
-              { icon:'🎨', title:'UI/UX Design', issuer:'Information Technology Learning Hub' },
-              { icon:'🌐', title:'Dynamic Web Design', issuer:'IxDF — Interaction Design Foundation' },
-              { icon:'💡', title:'Emotional Design', issuer:'IxDF — Interaction Design Foundation' },
-              { icon:'📋', title:'Project Management Foundation', issuer:'LinkedIn Learning' },
-              { icon:'💻', title:'Advanced Diploma in Computer Applications', issuer:'KEONICS' },
-            ].map((c,i) => (
-              <div key={i} className={`cert-card reveal d${i%4}`}>
-                <div className="cert-icon">{c.icon}</div>
-                <div><div className="cert-title">{c.title}</div><div className="cert-issuer">{c.issuer}</div></div>
-              </div>
+            {CERTS.map((c, i) => (
+              <button
+                key={i}
+                className={`cert-card reveal d${i % 4}`}
+                onClick={() => setActiveCert(c)}
+                aria-label={`View ${c.title} certificate`}
+              >
+                <div className="cert-card-body">
+                  <div className="cert-title">{c.title}</div>
+                  <div className="cert-issuer">{c.issuer}</div>
+                </div>
+                <div className="cert-view-hint">
+                  <span className="cert-arrow">↗</span>
+                </div>
+              </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── EDUCATION ── */}
+      {/* Cert lightbox */}
+      {activeCert && <CertModal cert={activeCert} onClose={() => setActiveCert(null)} />}
+
+      {/* ══════════════════════════════════════════
+          EDUCATION
+      ══════════════════════════════════════════ */}
       <section className="section edu-section">
         <div className="container">
           <div className="section-label">Academic background</div>
@@ -177,7 +378,6 @@ const [loading, setLoading]   = useState(true);
                 <div className="edu-school">The National Institute of Engineering, Mysuru</div>
                 <div className="edu-period">Feb 2022 — Dec 2023</div>
               </div>
-              <div style={{textAlign:'right'}}><div className="edu-grade">7.53</div><div className="edu-grade-label">GPA / 10</div></div>
             </div>
             <div className="edu-card reveal d1">
               <div>
@@ -185,11 +385,11 @@ const [loading, setLoading]   = useState(true);
                 <div className="edu-school">Government Arts and Science College, Karwar</div>
                 <div className="edu-period">Jul 2018 — Nov 2021</div>
               </div>
-              <div style={{textAlign:'right'}}><div className="edu-grade">66%</div><div className="edu-grade-label">Percentage</div></div>
             </div>
           </div>
         </div>
       </section>
+
     </main>
   );
 }

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
 import { getAllProjects, seedIfNeeded } from '../store/projectStore';
 import './Portfolio.css';
@@ -43,8 +42,8 @@ export default function Portfolio() {
   return (
     <main>
       <div className="page-header">
-        <div className="page-header-inner container">
-          <div className="page-eyebrow">Selected work</div>
+        <div className="container">
+          <div className="section-label">Selected work</div>
           <h1 className="page-title">Portfolio</h1>
           <p className="page-desc">Case studies and projects across SaaS, AI, enterprise, and government platforms. Click any card to open the full case study.</p>
         </div>
@@ -76,13 +75,7 @@ export default function Portfolio() {
               ))}
             </div>
           )}
-          <div className="portfolio-cta reveal">
-            <div className="cta-box">
-              <h2 className="cta-title">Like what you see?</h2>
-              <p className="cta-sub">I'm open to full-time roles, contract projects, and design collaborations.</p>
-              <Link to="/contact" className="btn-primary">Let's Talk →</Link>
-            </div>
-          </div>
+          
         </div>
       </section>
     </main>

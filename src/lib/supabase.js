@@ -1,6 +1,16 @@
-import { createClient } from '@supabase/supabase-js';
+// ──────────────────────────────────────────────────────────────────────────────
+// REMOVED.
+// This file used to export a Supabase client. The site no longer uses Supabase
+// — project data lives in `public/data/projects.json` instead.
+//
+// Safe to delete this file (and the whole `src/lib/` folder if it's now empty)
+// via File Explorer. Kept as a stub so existing imports don't break the build
+// before you clean up.
+// ──────────────────────────────────────────────────────────────────────────────
 
-const SUPABASE_URL = 'https://nozuqgftrqkjrkcqyiro.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5venVxZ2Z0cnFranJrY3F5aXJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0MDE1MjEsImV4cCI6MjA5Mzk3NzUyMX0.lQrrZan-V7TSlIxETcor1OXkuwKsxOT5eVte8DrlGoo';
+const DEPRECATED_MSG =
+  '[supabase] Supabase has been removed. Edit public/data/projects.json instead.';
 
-export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+export const supabase = new Proxy({}, {
+  get() { throw new Error(DEPRECATED_MSG); },
+});

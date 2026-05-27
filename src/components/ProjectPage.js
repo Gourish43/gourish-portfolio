@@ -21,7 +21,7 @@ export function Steps({ steps }) {
       {steps.map(([num, name, desc]) => (
         <div key={num} className="cs-step">
           <div className="cs-step-num">{num}</div>
-          <div>
+          <div className="cs-step-body">
             <div className="cs-step-name">{name}</div>
             <div className="cs-step-desc">{desc}</div>
           </div>
@@ -40,7 +40,12 @@ export function ToolRow({ tools }) {
 }
 
 export function Highlight({ children }) {
-  return <div className="cs-highlight-box"><p>{children}</p></div>;
+  return (
+    <div className="cs-highlight-box">
+      <span className="cs-highlight-icon">❝</span>
+      <p>{children}</p>
+    </div>
+  );
 }
 
 export function BulletList({ items }) {
@@ -53,7 +58,7 @@ export function BulletList({ items }) {
   );
 }
 
-export default function ProjectPage({ accentBg = 'var(--off-white)', heroStats, tags, title, desc, toc, children, nextTitle, nextTo }) {
+export default function ProjectPage({ accentBg = 'var(--off-white)', heroStats, tags, title, desc, thumbnail, toc, children, nextTitle, nextTo }) {
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
@@ -76,19 +81,32 @@ export default function ProjectPage({ accentBg = 'var(--off-white)', heroStats, 
 
   return (
     <main>
-      {/* HERO */}
+      {/* ── HERO ── */}
       <div className="proj-hero" style={{ background: accentBg }}>
         <div className="proj-hero-inner container">
-          <Link to="/portfolio" className="proj-back">← Back to Portfolio</Link>
-          <div className="proj-hero-meta">
-            {tags.map(t => <span key={t} className="tag">{t}</span>)}
+
+          {/* Top row: back button ← → tags */}
+          <div className="proj-hero-top">
+            <Link to="/portfolio" className="proj-back">
+              <span className="proj-back-arrow">←</span>
+              Back to Portfolio
+            </Link>
+            <div className="proj-hero-meta">
+              {tags.map(t => <span key={t} className="tag">{t}</span>)}
+            </div>
           </div>
-          <h1 className="proj-hero-title">{title}</h1>
-          <p className="proj-hero-desc">{desc}</p>
+
+          {/* 2-col: title left, description right */}
+          <div className="proj-hero-grid">
+            <h1 className="proj-hero-title">{title}</h1>
+            <p className="proj-hero-desc">{desc}</p>
+          </div>
+
+          {/* Stats strip */}
           {heroStats && (
             <div className="proj-hero-stats">
               {heroStats.map(([val, label]) => (
-                <div key={label}>
+                <div key={label} className="proj-stat-item">
                   <div className="proj-stat-val">{val}</div>
                   <div className="proj-stat-label">{label}</div>
                 </div>
@@ -96,34 +114,50 @@ export default function ProjectPage({ accentBg = 'var(--off-white)', heroStats, 
             </div>
           )}
         </div>
+
+        {/* Thumbnail — shown below stats if available */}
+        {thumbnail && (
+          <div className="proj-hero-thumbnail">
+            <div className="proj-hero-thumbnail-inner">
+              <img src={thumbnail} alt={title} className="proj-hero-img" />
+            </div>
+          </div>
+        )}
       </div>
 
-      {/* BODY */}
+      {/* ── BODY ── */}
       <div className="proj-body-wrap">
         <aside className="proj-sidebar">
           <div className="proj-sidebar-title">Contents</div>
           <ul className="proj-sidebar-nav">
             {toc.map(([id, label]) => (
               <li key={id}>
-                <a href={`#${id}`} className={activeSection === id ? 'active' : ''}
-                  onClick={e => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }); }}>
+                <a
+                  href={`#${id}`}
+                  className={activeSection === id ? 'active' : ''}
+                  onClick={e => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }); }}
+                >
                   {label}
                 </a>
               </li>
             ))}
           </ul>
         </aside>
+
         <div className="proj-content">{children}</div>
       </div>
 
-      {/* CONTACT CTA */}
+      {/* ── CTA STRIP ── */}
       <div className="contact-cta-strip">
-        <h2 className="cta-title">Interested in my work?</h2>
-        <p className="cta-sub">Let's discuss how I can bring this depth of thinking to your product.</p>
-        <Link to="/contact" className="btn-primary">Let's Talk →</Link>
+        <div className="cta-inner">
+          <div className="cta-eyebrow">Let's work together</div>
+          <h2 className="cta-title">Interested in my work?</h2>
+          <p className="cta-sub">Let's discuss how I can bring this depth of thinking to your product.</p>
+          <Link to="/contact" className="btn-primary">Let's Talk →</Link>
+        </div>
       </div>
 
-      {/* NEXT PROJECT */}
+      {/* ── NEXT PROJECT ── */}
       {nextTitle && (
         <div className="proj-next">
           <div className="proj-next-label">Next project</div>

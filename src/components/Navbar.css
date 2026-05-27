@@ -1,8 +1,9 @@
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  height: 80px;
-  background: rgba(255,255,255,0.88);
-  backdrop-filter: blur(18px);
+  height: var(--nav-h);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid transparent;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 6%;
@@ -10,24 +11,30 @@
 }
 .navbar.scrolled {
   border-bottom-color: var(--border);
-  background: rgba(255,255,255,0.96);
+  background: rgba(255,255,255,0.98);
 }
 
 .nav-logo {
   font-family: var(--serif);
-  font-size: 2rem; letter-spacing: -0.02em;
+  font-size: 1.35rem; letter-spacing: -0.02em;
   color: var(--text-1); text-decoration: none;
   flex-shrink: 0;
+  display: flex; align-items: center; gap: 7px;
+}
+.nav-logo-icon {
+  font-size: 0.75rem;
+  color: var(--text-3);
+  font-family: var(--sans);
 }
 
 .nav-links {
-  display: flex; align-items: center; gap: 2.2rem;
+  display: flex; align-items: center; gap: 2rem;
   list-style: none;
 }
 .nav-links a {
   font-size: 0.875rem; font-weight: 400;
   color: var(--text-2); text-decoration: none;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   position: relative; transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--text-1); }
@@ -37,19 +44,38 @@
   height: 1.5px; background: var(--text-1); border-radius: 2px;
 }
 
+/* ── RESUME BUTTON ── outlined pill */
+.nav-resume {
+  font-size: 0.8rem !important; font-weight: 500 !important;
+  color: var(--text-1) !important;
+  border: 1.5px solid var(--border-s) !important;
+  padding: 7px 18px !important;
+  border-radius: 40px;
+  text-decoration: none !important;
+  transition: background 0.2s, border-color 0.2s, color 0.2s !important;
+  letter-spacing: 0.01em;
+}
+.nav-resume::after { display: none !important; }
+.nav-resume:hover {
+  background: var(--text-1) !important;
+  color: var(--white) !important;
+  border-color: var(--text-1) !important;
+}
+
+/* ── LET'S TALK — filled pill ── */
 .nav-cta {
   font-size: 0.82rem !important; font-weight: 500 !important;
   color: var(--white) !important;
   background: var(--text-1);
-  padding: 8px 22px !important;
+  padding: 8px 20px !important;
   border-radius: 40px;
   transition: opacity 0.2s !important;
 }
 .nav-cta:hover { opacity: 0.78; }
 .nav-cta.active-cta { opacity: 0.78; }
-.nav-cta.active::after { display: none !important; }
+.nav-cta::after { display: none !important; }
 
-/* Hamburger */
+/* ── HAMBURGER ── */
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; cursor: pointer; padding: 4px;
@@ -63,7 +89,7 @@
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   .hamburger { display: flex; }
   .nav-links {
     position: fixed; top: var(--nav-h); left: 0; right: 0;
@@ -71,11 +97,12 @@
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     flex-direction: column; gap: 0; padding: 16px 0 24px;
-    transform: translateY(-100%); opacity: 0; pointer-events: none;
+    transform: translateY(-110%); opacity: 0; pointer-events: none;
     transition: transform 0.35s var(--ease), opacity 0.25s;
   }
   .nav-links.open { transform: none; opacity: 1; pointer-events: all; }
   .nav-links li { width: 100%; text-align: center; }
   .nav-links a { display: block; padding: 14px 0; font-size: 1rem; }
-  .nav-cta { margin: 8px auto 0; display: inline-block !important; }
+  .nav-resume { margin: 8px auto 0; display: inline-block !important; }
+  .nav-cta { margin: 4px auto 0; display: inline-block !important; }
 }

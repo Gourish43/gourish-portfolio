@@ -1,0 +1,160 @@
+[
+  {
+    "id": "trusting-news",
+    "slug": "trusting-news",
+    "title": "TrustIn News",
+    "desc": "A regional news app rebuilt around trust, transparency, and the everyday rhythm of Indian readers.",
+    "year": "2024",
+    "tags": ["Entertainment", "Mobile", "Figma"],
+    "visual": "pv-2",
+    "thumbnail": null,
+    "accentBg": "linear-gradient(150deg, #EAF3DE 0%, #F7F6F3 70%)",
+    "heroStats": [
+      { "val": "4 months", "label": "End-to-end" },
+      { "val": "+30%", "label": "Daily opens" },
+      { "val": "WCAG AA", "label": "Accessibility" }
+    ],
+    "sections": [
+      {
+        "id": "tn-overview",
+        "type": "overview",
+        "title": "A news app built for readers, not advertisers",
+        "content": "TrustIn News is a mobile-first regional news product designed to feel calmer, slower, and more honest than the scroll-driven competition.\n\nThis is placeholder content — edit `public/data/projects.json` and replace this section with your real story."
+      },
+      {
+        "id": "tn-problem",
+        "type": "problem",
+        "title": "The problem",
+        "content": "Regional readers were drowning in ads, clickbait, and noise. They wanted trust signals — sourcing, date, byline — and the ability to read without being interrupted."
+      },
+      {
+        "id": "tn-outcome",
+        "type": "outcome",
+        "title": "Outcome",
+        "content": "Daily opens grew 30%, and the average session length doubled within the first two months of release.",
+        "showMetrics": true,
+        "metrics": [
+          { "num": "+30%", "label": "Daily opens" },
+          { "num": "2×", "label": "Session length" },
+          { "num": "AA", "label": "WCAG conformance" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "esg-platform",
+    "slug": "esg-platform",
+    "title": "ESG Platform",
+    "desc": "Enterprise SaaS for ESG reporting — turning regulatory complexity into one calm dashboard.",
+    "year": "Nov 2025 — Present",
+    "tags": ["SaaS", "Enterprise", "ESG"],
+    "visual": "pv-3",
+    "thumbnail": null,
+    "accentBg": "linear-gradient(150deg, #F5EFD8 0%, #FBF8EF 70%)",
+    "heroStats": [
+      { "val": "Enterprise", "label": "Scale" },
+      { "val": "20+", "label": "Modules" },
+      { "val": "Agentic AI", "label": "Workflows" }
+    ],
+    "sections": [
+      {
+        "id": "esg-overview",
+        "type": "overview",
+        "title": "ESG reporting, reimagined",
+        "content": "Designed scalable UI/UX for an enterprise SaaS platform focused on ESG management and Agentic AI-driven workflows. Delivered Agentic AI and Supply Assessment modules from concept to production."
+      },
+      {
+        "id": "esg-role",
+        "type": "role",
+        "title": "My role",
+        "content": "End-to-end UI/UX design — research, wireframing, prototyping, design system, and developer handoff.",
+        "showBullets": true,
+        "bulletPoints": [
+          "Simplified enterprise user journeys, reducing complexity and improving efficiency.",
+          "Built and maintained scalable design systems to accelerate design-to-dev cycles.",
+          "Partnered with PMs and engineers across multiple modules."
+        ]
+      },
+      {
+        "id": "esg-outcome",
+        "type": "outcome",
+        "title": "Outcome",
+        "content": "Shipped two major modules to production. Reduced time-to-handoff and improved consistency across the platform.",
+        "showMetrics": true,
+        "metrics": [
+          { "num": "2", "label": "Major modules shipped" },
+          { "num": "20%", "label": "Faster handoff" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "defence-ux",
+    "slug": "defence-ux",
+    "title": "Defence UX",
+    "desc": "Confidential UX work for government and defence platforms — accessibility, security, and speed.",
+    "year": "Jan – Nov 2025",
+    "tags": ["Government", "Enterprise", "WCAG 2.1"],
+    "visual": "pv-4",
+    "thumbnail": null,
+    "accentBg": "linear-gradient(150deg, #E3ECF5 0%, #F3F6FA 70%)",
+    "heroStats": [
+      { "val": "20%", "label": "Faster handoff" },
+      { "val": "AA", "label": "WCAG conformance" }
+    ],
+    "sections": [
+      {
+        "id": "def-overview",
+        "type": "overview",
+        "title": "UX for high-stakes systems",
+        "content": "Led end-to-end UI/UX design for confidential government and defence platforms with Bharat Electronics Limited (via Quantum Asia)."
+      },
+      {
+        "id": "def-decisions",
+        "type": "decisions",
+        "title": "Key decisions",
+        "showBullets": true,
+        "bulletPoints": [
+          "**Accessibility first**: every screen WCAG 2.1 AA compliant from the start.",
+          "**Security-aware patterns**: no flashy interactions that obscure system state.",
+          "**Dev partnership**: simplified handoff with a tokenised design system."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "warehouse-dashboard",
+    "slug": "warehouse-dashboard",
+    "title": "Warehouse Dashboard",
+    "desc": "Operations dashboard for a logistics team — clarity over decoration.",
+    "year": "2024",
+    "tags": ["SaaS", "Dashboard", "Figma"],
+    "visual": "pv-5",
+    "thumbnail": null,
+    "accentBg": "linear-gradient(150deg, #EFE9F5 0%, #F8F5FB 70%)",
+    "heroStats": [
+      { "val": "Real-time", "label": "Inventory view" },
+      { "val": "10+", "label": "Roles supported" }
+    ],
+    "sections": [
+      {
+        "id": "wh-overview",
+        "type": "overview",
+        "title": "A dashboard that respects the operator",
+        "content": "Designed a warehouse operations dashboard with real-time inventory, exception alerts, and role-based views for floor staff, supervisors, and managers."
+      },
+      {
+        "id": "wh-process",
+        "type": "process",
+        "title": "Process",
+        "showSteps": true,
+        "steps": [
+          { "num": "01", "name": "Shadow", "desc": "Spent two days on the floor watching operators work." },
+          { "num": "02", "name": "Map", "desc": "Mapped current workflows and pain points by role." },
+          { "num": "03", "name": "Prototype", "desc": "Mid-fi prototypes tested with three operators per role." },
+          { "num": "04", "name": "Ship", "desc": "Shipped a v1 with telemetry built in." }
+        ]
+      }
+    ]
+  }
+]

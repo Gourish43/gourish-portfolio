@@ -16,10 +16,6 @@ export default function ProjectCard({ to, visual, tags, title, thumbnail, featur
         <div className="proj-overlay">
           {category && <div className="proj-category">{category}</div>}
           <div className="proj-title">{title || 'Project Title'}</div>
-          <div className="proj-cta-row">
-            <span className="proj-cta">View case study</span>
-            <span className="proj-arrow">→</span>
-          </div>
         </div>
       </div>
     </Link>

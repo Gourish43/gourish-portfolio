@@ -25,11 +25,23 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <Link to="/" className="nav-logo">Gourish Pawaskar</Link>
+      <Link to="/" className="nav-logo">
+        <span className="nav-logo-icon">✦</span> Gourish
+      </Link>
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <li><Link to="/" className={isActive('/') && location.pathname === '/' ? 'active' : ''}>Home</Link></li>
         <li><Link to="/portfolio" className={isActive('/portfolio') ? 'active' : ''}>Portfolio</Link></li>
+        <li>
+          <a
+            href="/Gourish_Pawaskar_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="nav-resume"
+          >
+            Resume ↗
+          </a>
+        </li>
         <li><Link to="/contact" className={`nav-cta ${isActive('/contact') ? 'active-cta' : ''}`}>Let's Talk</Link></li>
       </ul>
 
