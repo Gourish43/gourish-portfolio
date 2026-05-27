@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <Link to="/" className="nav-logo">
-        <span className="nav-logo-icon">✦</span> Gourish
+        <span className="nav-logo-icon">✦</span> Gourish Pawaskar
       </Link>
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
