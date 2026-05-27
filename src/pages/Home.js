@@ -152,22 +152,28 @@ export default function Home() {
         <div className="container">
           <div className="about-grid">
             {/* Left: text + metric */}
+            {/* Left: text */}
             <div className="about-left">
               <div className="section-label">About Me</div>
               <p className="about-lead">
-                I specialise in solving complex problems through elegant solutions. My approach blends creativity with
+                I specialise in solving complex problems through elegant solutions — blending creativity with
                 strategic thinking to deliver designs that not only look great but work seamlessly.
               </p>
-              <div className="about-metric-card">
+              <p className="about-body">
+                Product-focused designer crafting accessible, human-centred experiences for enterprise SaaS,
+                AI-driven platforms, and government systems. Based in Bengaluru, Karnataka.
+              </p>
+              <Link to="/contact" className="btn-outline">Let's Talk</Link>
+            </div>
+
+            {/* Right: metric card + bullets */}
+            <div className="about-right">
+              <div className="about-metric-card reveal">
                 <div className="about-metric-num">40%</div>
                 <p className="about-metric-desc">
                   Average increase in client engagement in the first 6 months — backed by measurable outcomes across every project.
                 </p>
               </div>
-                          </div>
-
-            {/* Right: bullet points */}
-            <div className="about-right">
               <div className="about-bullets reveal d1">
                 {[
                   'With 4+ years of experience, specialising in crafting intuitive, user-focused designs that deliver seamless digital experiences.',
