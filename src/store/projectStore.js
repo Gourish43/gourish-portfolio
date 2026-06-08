@@ -47,6 +47,8 @@ function normaliseProject(p) {
     accentBg:   p.accentBg || '',
     heroStats:  Array.isArray(p.heroStats) ? p.heroStats : [],
     sections:   Array.isArray(p.sections) ? p.sections : [],
+    type:       p.type || 'case-study',
+    images:     Array.isArray(p.images) ? p.images : [],
     hardcoded:  true,
     createdAt:  p.createdAt || 0,
     updatedAt:  p.updatedAt || 0,

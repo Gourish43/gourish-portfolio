@@ -163,7 +163,6 @@ export default function Home() {
                 Product-focused designer crafting accessible, human-centred experiences for enterprise SaaS,
                 AI-driven platforms, and government systems. Based in Bengaluru, Karnataka.
               </p>
-              <Link to="/contact" className="btn-outline">Let's Talk</Link>
             </div>
 
             {/* Right: metric card + bullets */}
@@ -236,7 +235,6 @@ export default function Home() {
               <p className="exp-intro">
                 Over the past 4+ years, I've had the opportunity to work on a wide range of design projects, collaborating with diverse teams and clients to bring creative visions to life.
               </p>
-              <Link to="/contact" className="btn-outline">Let's Talk</Link>
             </div>
           </div>
 
@@ -292,23 +290,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════
-          DARK CTA BANNER
-      ══════════════════════════════════════════ */}
-      <section className="dark-cta-strip">
-        <div className="dark-cta-inner container">
-          <div className="dark-cta-text">
-            <div className="dark-cta-eyebrow">Book Your Free Consultation Here!</div>
-            <h2 className="dark-cta-title">Looking for a UI/UX designer?<br />Let's build something great.</h2>
-            <p className="dark-cta-sub">Open to full-time roles, contract projects, and design collaborations. Based in Bengaluru — available remotely too.</p>
-          </div>
-          <div className="dark-cta-actions">
-            <Link to="/contact" className="btn-primary">Let's Talk</Link>
-            <Link to="/portfolio" className="btn-outline">See My Work</Link>
           </div>
         </div>
       </section>

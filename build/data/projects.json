@@ -411,6 +411,36 @@
     ]
   },
   {
+    "id": "poster-flyer-designs",
+    "slug": "poster-flyer-designs",
+    "title": "Poster & Flyer Designs",
+    "desc": "A collection of poster and flyer designs crafted for various brands and campaigns — combining strong visual hierarchy, typography, and layout to communicate messages effectively.",
+    "year": "2023 – 2025",
+    "tags": ["Visual Design", "Poster", "Flyer"],
+    "type": "visual-design",
+    "visual": "pv-5",
+    "thumbnail": "/images/visual-design/posters/poster-1.jpg",
+    "accentBg": "linear-gradient(150deg, #EDE9FE 0%, #F5F3FF 70%)",
+    "images": [],
+    "heroStats": [],
+    "sections": []
+  },
+  {
+    "id": "logo-designs",
+    "slug": "logo-designs",
+    "title": "Logo Designs",
+    "desc": "Brand identity and logo design work across different industries — focused on creating distinctive marks that reflect each brand's character, values, and positioning.",
+    "year": "2023 – 2025",
+    "tags": ["Visual Design", "Logo", "Branding"],
+    "type": "visual-design",
+    "visual": "pv-3",
+    "thumbnail": "/images/visual-design/logos/logo-1.jpg",
+    "accentBg": "linear-gradient(150deg, #FEF3C7 0%, #FFFBEB 70%)",
+    "images": [],
+    "heroStats": [],
+    "sections": []
+  },
+  {
     "id": "mik-knowledge-repository",
     "slug": "mik-knowledge-repository",
     "title": "MIK — Knowledge Repository",
@@ -543,6 +573,29 @@
         "type": "custom",
         "title": "AI Search Experience",
         "content": "The conversational AI experience was designed to simplify how users interact with large document repositories by allowing natural query-based searches instead of traditional manual navigation methods.\n\nThe system provides summarized insights along with related document references, helping users quickly understand relevant information and continue deeper exploration when required.",
+        "showImages": true,
+        "images": [
+          { "id": "mik-img-chat", "url": "/images/maritime-ai-chat/chat.jpg", "caption": "Conversational AI search — natural language query with summarised insights and document references", "position": "full" }
+        ],
+        "showBullets": true,
+        "bulletPoints": [
+          "Conversational document discovery through natural language queries",
+          "AI-generated summaries reducing time-to-insight",
+          "Contextual document recommendations based on query relevance",
+          "Faster information retrieval without navigating folder hierarchies",
+          "Simplified knowledge exploration for non-technical enterprise users"
+        ]
+      },
+      {
+        "id": "mik-learnings",
+        "type": "learnings",
+        "title": "Key Learnings",
+        "content": "This project strengthened my understanding of designing AI-assisted enterprise workflows that involve large-scale information management and structured knowledge accessibility.\n\nIt also helped me improve my approach to balancing conversational UX with enterprise-level usability, security, and information hierarchy requirements."
+      }
+    ]
+  }
+]
+ploration when required.",
         "showImages": true,
         "images": [
           { "id": "mik-img-chat", "url": "/images/maritime-ai-chat/chat.jpg", "caption": "Conversational AI search — natural language query with summarised insights and document references", "position": "full" }

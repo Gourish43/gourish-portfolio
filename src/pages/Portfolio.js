@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import ProjectCard from '../components/ProjectCard';
+import VisualDesignCard from '../components/VisualDesignCard';
 import { getAllProjects, seedIfNeeded } from '../store/projectStore';
 import './Portfolio.css';
 
-const FILTERS = ['All','Entertainment','SaaS','Artificial Intelligence','Branding'];
+const FILTERS = ['All','Entertainment','SaaS','Artificial Intelligence','Visual Design'];
 
 export default function Portfolio() {
   const [active, setActive]     = useState('All');
@@ -31,11 +32,11 @@ export default function Portfolio() {
   }, [active, loading]);
 
   const filtered = projects.filter(p => {
-    if (active === 'All')       return true;
-    if (active === 'Entertainment') return (p.tags||[]).some(t => /Entertainment|Film|design|figma/i.test(t));
-    if (active === 'SaaS')      return (p.tags||[]).some(t => /saas|enterprise|esg/i.test(t));
-    if (active === 'Artificial Intelligence')  return (p.tags||[]).some(t => /Agentic|ai/i.test(t));
-    if (active === 'Branding') return (p.tags||[]).some(t => /logo|Poster|Flyer/i.test(t));
+    if (active === 'All')                    return true;
+    if (active === 'Entertainment')          return (p.tags||[]).some(t => /entertainment/i.test(t));
+    if (active === 'SaaS')                   return (p.tags||[]).some(t => /\bsaas\b/i.test(t));
+    if (active === 'Artificial Intelligence') return (p.tags||[]).some(t => /\bai\b|agentic/i.test(t));
+    if (active === 'Visual Design')          return p.type === 'visual-design';
     return true;
   });
 
@@ -70,7 +71,10 @@ export default function Portfolio() {
               {filtered.map((p, i) => (
                 <div key={p.id} className={`reveal d${i % 3}`}
                   style={i === 0 && filtered.length > 1 ? {gridColumn:'span 2'} : {}}>
-                  <ProjectCard {...p} featured={i === 0 && filtered.length > 1} />
+                  {p.type === 'visual-design'
+                    ? <VisualDesignCard {...p} featured={i === 0 && filtered.length > 1} />
+                    : <ProjectCard {...p} featured={i === 0 && filtered.length > 1} />
+                  }
                 </div>
               ))}
             </div>

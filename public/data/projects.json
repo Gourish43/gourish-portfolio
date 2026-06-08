@@ -411,6 +411,54 @@
     ]
   },
   {
+    "id": "poster-flyer-designs",
+    "slug": "poster-flyer-designs",
+    "title": "Poster & Flyer Designs",
+    "desc": "A collection of poster and flyer designs crafted for various brands and campaigns — combining strong visual hierarchy, typography, and layout to communicate messages effectively.",
+    "year": "2023 – 2025",
+    "tags": ["Visual Design", "Poster", "Flyer"],
+    "type": "visual-design",
+    "visual": "pv-5",
+    "thumbnail": "/images/visual-design/posters/eng-day-bmw.jpg",
+    "accentBg": "linear-gradient(150deg, #EDE9FE 0%, #F5F3FF 70%)",
+    "images": [
+      "/images/visual-design/posters/eng-day-bmw.jpg",
+      "/images/visual-design/posters/Ganesh-chaturthi-BMW.jpg",
+      "/images/visual-design/posters/Frame%2073.jpg",
+      "/images/visual-design/posters/Frame%2092.jpg",
+      "/images/visual-design/posters/Frame%205500%20(1).jpg",
+      "/images/visual-design/posters/Instagram%20post%20-%201.png",
+      "/images/visual-design/posters/Instagram%20post%20-%203.jpg",
+      "/images/visual-design/posters/Instagram%20story%20-%203.jpg"
+    ],
+    "heroStats": [],
+    "sections": []
+  },
+  {
+    "id": "logo-designs",
+    "slug": "logo-designs",
+    "title": "Logo Designs",
+    "desc": "Brand identity and logo design work across different industries — focused on creating distinctive marks that reflect each brand's character, values, and positioning.",
+    "year": "2023 – 2025",
+    "tags": ["Visual Design", "Logo", "Branding"],
+    "type": "visual-design",
+    "visual": "pv-3",
+    "thumbnail": "/images/visual-design/logos/Frame%205499.jpg",
+    "accentBg": "linear-gradient(150deg, #FEF3C7 0%, #FFFBEB 70%)",
+    "images": [
+      "/images/visual-design/logos/Frame%205499.jpg",
+      "/images/visual-design/logos/Frame%205488.jpg",
+      "/images/visual-design/logos/Frame%205489.jpg",
+      "/images/visual-design/logos/Frame%205487.jpg",
+      "/images/visual-design/logos/Frame%205490%20(1).jpg",
+      "/images/visual-design/logos/Frame%2021%20(1).jpg",
+      "/images/visual-design/logos/Lightbox%20Sign.jpg",
+      "/images/visual-design/logos/Instagram%20post%20-%205.jpg"
+    ],
+    "heroStats": [],
+    "sections": []
+  },
+  {
     "id": "mik-knowledge-repository",
     "slug": "mik-knowledge-repository",
     "title": "MIK — Knowledge Repository",
