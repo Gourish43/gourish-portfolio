@@ -34,7 +34,7 @@ export default function Navbar() {
         <li><Link to="/portfolio" className={isActive('/portfolio') ? 'active' : ''}>Portfolio</Link></li>
         <li>
           <a
-            href="/Gourish_Pawaskar_Resume.pdf"
+            href="public/thumbnails/Gourish_Pawaskar_Resume.pdf"
             target="_blank"
             rel="noreferrer"
             className="nav-resume"
