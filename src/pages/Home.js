@@ -260,7 +260,7 @@ export default function Home() {
               {
                 company: 'Nudijenu Publishers',
                 loc: 'Karwar, KA',
-                date: 'Sep 2023 – Dec 2024',
+                date: 'Jun 2024 – Dec 2024',
                 role: 'UI/UX Designer',
                 desc: 'Redesigned and launched responsive websites, improving digital reach by 30%. Conducted user research, wireframing, and prototyping.',
                 tags: ['Branding', 'UX'],
