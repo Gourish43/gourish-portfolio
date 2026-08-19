@@ -129,7 +129,7 @@ export default function Home() {
 
           {/* Stats strip below CTAs */}
           <div className="hero-stats-strip">
-            {[['4+','Years experience'],['20+','Products shipped'],['5','Certifications']].map(([n,l]) => (
+            {[['2+','Years experience'],['20+','Products shipped'],['5','Certifications']].map(([n,l]) => (
               <div key={l} className="hero-stat-item">
                 <div className="hero-stat-num">{n}</div>
                 <div className="hero-stat-label">{l}</div>
